@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER sameer@damagehead.com
+MAINTAINER zhouxin@day-one.cn
 
 ENV SQUID_VERSION=3.3.8 \
     SQUID_CACHE_DIR=/var/spool/squid3 \
