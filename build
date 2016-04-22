@@ -1,4 +1,5 @@
 
 #!/bin/bash
-
+wget http://mirrors.163.com/.help/sources.list.trusty
+mv sources.list.trusty sources.list
 docker build -t squid .
