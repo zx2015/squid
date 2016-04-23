@@ -12,16 +12,8 @@ create_cache_dir() {
   chown -R ${SQUID_USER}:${SQUID_USER} ${SQUID_CACHE_DIR}
 }
 
-apply_backward_compatibility_fixes() {
-  if [[ -f /etc/squid3/squid.user.conf ]]; then
-    rm -rf /etc/squid3/squid.conf
-    ln -sf /etc/squid3/squid.user.conf /etc/squid3/squid.conf
-  fi
-}
-
 create_log_dir
 create_cache_dir
-apply_backward_compatibility_fixes
 
 # allow arguments to be passed to squid3
 if [[ ${1:0:1} = '-' ]]; then
